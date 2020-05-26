@@ -1,6 +1,9 @@
 package com.ge.healthcare.autosc.onwatch.model;
 
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 import java.io.Serializable;
 
@@ -13,6 +16,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="TBL_TASKLISTTAG")
+//@JacksonXmlRootElement(localName = "AutoSC")
+@XmlRootElement
 public class TaskListTag implements Serializable {
 	
 	private static final long serialVersionUID = -1L;
@@ -92,76 +97,3 @@ public class TaskListTag implements Serializable {
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*public class TaskListTag {
-	
-	private static final long serialVersionUID = -1L;
-
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "id")
-    private Long id;
-    
-    
-    @Column(name="province")
-    private String province;
-
-    @Column(name="city")
-    private String cityName;
-
- 
-    @Column(name="description")
-	private String description;
-   
-    public String getProvince() {
-		return province;
-	}
-
-	public void setProvince(String province) {
-		this.province = province;
-	}
-
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-
-
-    public String getCityName() {
-        return cityName;
-    }
-
-    public void setCityName(String cityName) {
-        this.cityName = cityName;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-	
-
-}
-*/
